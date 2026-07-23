@@ -1080,25 +1080,29 @@ footer p{
 
   }
 
-  /* footer */
-footer{
+  footer{
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
 
   height: var(--footer-h);
+
   display: flex;
   align-items: center;
   justify-content: center;
 
   text-align: center;
   font-size: 15px;
+  line-height: 1;
+  color: #000;
   opacity: .9;
-  color: #fff;
-}
+  }
+
 footer p{
+  margin: 0;
   padding: 0 12px;
+  line-height: 1;
 }
 
   /* USB */
