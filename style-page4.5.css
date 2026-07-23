@@ -1080,13 +1080,26 @@ footer p{
 
   }
 
-  footer{
+footer{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-    padding:20px;
+  height: var(--footer-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    font-size:15px;
+  text-align: center;
+  font-size: 15px;
+  opacity: .9;
+  color: #000000;
+}
 
-  }
+footer p{
+  padding: 0 12px;
+}
 
   /* USB */
 
@@ -1209,6 +1222,40 @@ footer p{
     font-size:13px;
 
   }
+
+
+/* Memo Header */
+
+.memo-header{
+
+  padding:0 8px;
+
+}
+
+.memo-buttons{
+
+  gap:1px;
+
+}
+
+.memo-buttons button{
+
+  width:20px;
+  height:20px;
+
+  color:#333;
+
+  font-size:15px;
+  line-height:20px;
+
+}
+
+.memo-buttons button:hover{
+
+  background:none;
+
+}
+
 
   /* Resize 제거 */
 

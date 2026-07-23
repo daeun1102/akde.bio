@@ -449,6 +449,9 @@ roleFile.addEventListener("click", () => {
    Memo UI
 ========================= */
 
+let isResizing = false;
+let currentHandle = null;
+
 function createMemoLine(text = ""){
 
   const line =
@@ -539,6 +542,7 @@ function setupMemoEditor(editor){
 
 function resetMemo(memo){
 
+  console.log("reset", memo.id);
   const isMobile =
     window.innerWidth <= 768;
 
@@ -725,11 +729,8 @@ document.querySelectorAll(".memo").forEach(memo => {
 const resizeHandles =
   memo.querySelectorAll(".resize-handle");
 
-const MIN_W = 260;
+const MIN_W = 300;
 const MIN_H = 180;
-
-let isResizing = false;
-let currentHandle = null;
 
 resizeHandles.forEach(handle => {
 
