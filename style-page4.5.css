@@ -1,0 +1,1221 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* =========================
+   ROOT
+========================= */
+
+:root{
+
+  --footer-h:60px;
+
+}
+
+/* =========================
+   BASE
+========================= */
+
+body{
+
+  font-family:"SUIT",sans-serif;
+
+  color:#111;
+  line-height:1.6;
+
+  overflow-x:hidden;
+
+  background:#fff;
+  background-image:url("images/bg4.png");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+
+}
+
+::selection{
+
+  background:yellow;
+  color:#000;
+
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.container{
+
+  display:flex;
+
+  justify-content:center;
+
+  max-width:1250px;
+
+  margin:auto;
+
+  padding:90px;
+  padding-top:134.5px;
+  padding-bottom:calc(var(--footer-h) + 24px);
+
+  gap:205px;
+
+}
+
+.left-pane,
+.right-pane{
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:flex-start;
+  align-items:flex-start;
+
+  width:50%;
+
+}
+
+.left-pane img{
+
+  max-width:130%;
+  height:auto;
+
+  padding-top:10px;
+
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h2{
+
+  margin-bottom:10px;
+
+  color:red;
+
+  font-size:18px;
+  font-weight:800;
+
+}
+
+h3{
+
+  margin:5px 0;
+
+  font-size:14px;
+  font-weight:700;
+
+}
+
+h4{
+
+  color:rgb(156,156,156);
+
+  font-size:14px;
+  font-weight:400;
+
+}
+
+h5{
+
+  color:#000;
+
+  font-size:14px;
+  font-weight:400;
+  line-height:1.8;
+
+}
+
+.scroll-inline{
+
+  white-space:nowrap;
+
+  overflow-x:auto;
+
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-wrapper{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+
+  z-index:100;
+
+}
+
+.logo-wrapper img{
+
+  position:absolute;
+
+  top:100px;
+  left:150px;
+
+  height:70px;
+
+  cursor:pointer;
+
+}
+
+/* =========================
+   FLOATING BUTTON
+========================= */
+
+.floating-button{
+
+  position:fixed;
+
+  right:150px;
+  bottom:100px;
+
+  z-index:99;
+
+}
+
+.coffee-float{
+
+  width:60px;
+
+  cursor:pointer;
+
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-button{
+
+  position:fixed;
+
+  left:150px;
+  bottom:100px;
+
+  z-index:99;
+
+}
+
+.back-button img{
+
+  width:60px;
+  height:auto;
+
+}
+
+/* =========================
+   USB
+========================= */
+
+.usb-port-wrap{
+
+  display:flex;
+
+  justify-content:center;
+
+  width:100%;
+
+  margin-top:80px;
+
+}
+
+.usb-port{
+
+  width:150px;
+
+  transition:.3s;
+
+}
+
+.usb-port.highlight{
+
+  transform:scale(1.06);
+
+}
+
+.usb-image{
+
+  position:relative;
+
+  top:100px;
+  left:80px;
+
+  z-index:1000;
+
+  width:400px;
+
+  cursor:grab;
+
+  user-select:none;
+
+  animation:
+    usbFloat 2.5s ease-in-out infinite,
+    usbGlow 2s ease-in-out infinite;
+
+}
+
+.usb-image.dragging{
+
+  animation:none;
+
+}
+
+@keyframes usbFloat{
+
+  0%,
+  100%{
+
+    transform:translateY(0);
+
+  }
+
+  50%{
+
+    transform:translateY(-15px);
+
+  }
+
+}
+
+@keyframes usbGlow{
+
+  0%,
+  100%{
+
+    filter:
+      brightness(1)
+      drop-shadow(0 0 5px rgba(255,255,255,.3));
+
+  }
+
+  50%{
+
+    filter:
+      brightness(1.35)
+      drop-shadow(0 0 15px rgba(255,255,255,.9))
+      drop-shadow(0 0 30px rgba(255,255,255,.8))
+      drop-shadow(0 0 40px rgb(255,255,255));
+
+  }
+
+}
+/* =========================
+   OVERLAY
+========================= */
+
+.archive-overlay{
+
+  position:fixed;
+  inset:0;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:rgba(0,0,0,.486);
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:opacity .6s ease;
+
+  z-index:20000;
+
+}
+
+.archive-overlay.active{
+
+  opacity:1;
+  visibility:visible;
+
+}
+
+.archive-content{
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  width:100%;
+
+}
+
+.close-overlay{
+
+  position:absolute;
+
+  top:40px;
+  left:40px;
+
+  border:none;
+  background:none;
+
+  color:#fff;
+
+  font-size:40px;
+
+  cursor:pointer;
+
+}
+
+.overlay-back{
+
+  position:absolute;
+
+  left:50%;
+  bottom:280px;
+
+  transform:translateX(-50%);
+
+  display:none;
+
+  border:none;
+  background:none;
+
+  color:#fff;
+
+  font-size:16px;
+
+  cursor:pointer;
+
+}
+
+.overlay-back:hover{
+
+  opacity:1;
+
+}
+
+/* =========================
+   FOLDER
+========================= */
+
+.folder-grid{
+
+  display:none;
+
+  justify-content:center;
+  align-items:center;
+
+  gap:80px;
+
+  width:100%;
+
+  text-align:center;
+
+}
+
+.folder{
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  color:#fff;
+
+  cursor:pointer;
+
+  transition:transform .2s ease;
+
+}
+
+.folder:hover{
+
+  transform:translateY(-5px);
+
+}
+
+.folder-icon{
+
+  font-size:60px;
+  line-height:1;
+
+}
+
+.folder-name{
+
+  margin-top:8px;
+
+  color:#fff;
+
+  font-size:12px;
+
+}
+
+/* =========================
+   FILE VIEW
+========================= */
+
+/* File */
+
+.file-grid-view{
+
+  display:none;
+
+  flex-direction:row;
+
+  justify-content:center;
+  align-items:flex-start;
+
+  gap:70px;
+
+  margin-top:30px;
+
+}
+
+.file-grid-view.active{
+
+    display:flex;
+
+}
+
+.file-card{
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  cursor:pointer;
+
+  color:#fff;
+  text-decoration:none;
+
+  transition:transform .2s ease;
+
+}
+
+.file-card:hover{
+
+  transform:translateY(-5px);
+
+}
+
+.file-name{
+
+  margin-top:10px;
+
+  font-size:12px;
+
+}
+
+.file-icon{
+
+  font-size:50px;
+  line-height:1;
+
+}
+
+#youtubeThumb{
+
+  width:220px;
+  height:124px;
+
+  object-fit:cover;
+
+}
+
+#roleFile{
+
+  margin-top:30px;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+  position:fixed;
+
+  right:0;
+  bottom:0;
+  left:0;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  height:var(--footer-h);
+
+  text-align:center;
+
+  color:#000;
+
+  font-size:15px;
+
+  opacity:.9;
+
+  z-index:50;
+
+}
+
+footer p{
+
+  padding:0 12px;
+
+}
+
+/* =========================
+   CURSOR
+========================= */
+
+.trail-container{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  pointer-events:none;
+
+  z-index:10000;
+
+}
+
+.trail-dot{
+
+  position:absolute;
+
+  width:15px;
+  height:15px;
+
+  background-repeat:no-repeat;
+  background-size:contain;
+
+  image-rendering:pixelated;
+
+  transform:translate(-50%,-50%);
+
+}
+
+/* =========================
+   MEMO
+========================= */
+
+.memo{
+
+  position:fixed;
+
+  z-index:25000;
+
+  width:300px;
+  height:222px;
+
+  overflow:hidden;
+
+  border:none;
+  border-radius:6px;
+
+  background:#e5e5e5;
+
+  box-shadow:2px 2px 8px rgba(0,0,0,.25);
+
+  font-family:"SUIT",sans-serif;
+
+}
+
+.memo.selection{
+
+  background:hwb(167 64% 1%);
+
+}
+
+.memo.selection .memo-header{
+
+  background:hwb(167 53% 15%);
+
+}
+
+.memo.role{
+
+  background:hwb(57 64% 1%);
+
+}
+
+.memo.role .memo-header{
+
+  background:hwb(57 53% 15%);
+
+}
+
+/* =========================
+   Memo Header
+========================= */
+
+.memo-header{
+
+  position:relative;
+
+  z-index:1;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  height:24px;
+
+  padding:0 6px;
+
+  background:#c7c7c7;
+
+  cursor:move;
+
+  user-select:none;
+
+  font-size:12px;
+
+}
+
+.memo-title{
+
+  display:inline-block;
+
+  width:300px;
+  height:14px;
+
+  padding-top:1px;
+  padding-left:4px;
+
+  color:#222;
+
+  line-height:14px;
+
+}
+
+.memo-buttons{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:2px;
+
+}
+
+.memo-buttons button{
+
+  width:16px;
+  height:16px;
+
+  padding:0;
+
+  border:none;
+
+  border-radius:4px;
+
+  background:none;
+
+  cursor:pointer;
+
+  font-size:16px;
+  line-height:18px;
+
+}
+
+.memo-buttons button:hover{
+
+  background:#a2a2a2;
+
+}
+
+/* =========================
+   Memo Body
+========================= */
+
+.memo-content{
+
+  position:relative;
+
+  width:100%;
+  height:calc(100% - 24px);
+
+  overflow:hidden;
+
+}
+
+.memo-editor{
+
+  width:100%;
+  height:100%;
+
+  padding:10px;
+
+  overflow-y:auto;
+
+  outline:none;
+
+  font-family:"SUIT",sans-serif;
+  font-size:13px;
+  line-height:1.8;
+
+  white-space:pre-wrap;
+
+}
+
+.memo-line{
+
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:8px;
+
+}
+
+.memo-bullet{
+
+  flex:none;
+
+  width:12px;
+
+  user-select:none;
+
+  font-size:13px;
+  line-height:1.8;
+
+}
+
+.memo-text{
+
+  flex:1;
+
+  min-height:18px;
+
+  outline:none;
+
+}
+
+/* =========================
+   Resize
+========================= */
+
+.resize-handle{
+
+  position:absolute;
+
+  z-index:9999;
+
+  pointer-events:auto;
+
+  background:rgba(255,0,0,.001);
+
+}
+
+.memo.minimized{
+
+  height:24px !important;
+
+  min-height:24px !important;
+
+  overflow:hidden !important;
+
+}
+
+.memo.minimized .memo-content{
+
+  display:none !important;
+
+}
+
+/* Corner */
+
+.tl{
+
+  top:-2px;
+  left:-2px;
+
+  width:16px;
+  height:16px;
+
+  cursor:nwse-resize;
+
+}
+
+.tr{
+
+  top:-2px;
+  right:-2px;
+
+  width:16px;
+  height:16px;
+
+  cursor:nesw-resize;
+
+}
+
+.bl{
+
+  bottom:-2px;
+  left:-2px;
+
+  width:16px;
+  height:16px;
+
+  cursor:nesw-resize;
+
+}
+
+.br{
+
+  right:-2px;
+  bottom:-2px;
+
+  width:16px;
+  height:16px;
+
+  cursor:nwse-resize;
+
+}
+
+/* Side */
+
+.left{
+
+  top:6px;
+  left:0;
+
+  width:6px;
+  height:calc(100% - 12px);
+
+  cursor:ew-resize;
+
+}
+
+.right{
+
+  top:6px;
+  right:0;
+
+  width:6px;
+  height:calc(100% - 12px);
+
+  cursor:ew-resize;
+
+}
+
+.top{
+
+  top:24px;
+  left:6px;
+
+  width:calc(100% - 12px);
+  height:6px;
+
+  cursor:ns-resize;
+
+}
+
+.bottom{
+
+  bottom:0;
+  left:6px;
+
+  width:calc(100% - 12px);
+  height:6px;
+
+  cursor:ns-resize;
+
+}
+
+/* =========================
+   MOBILE (≤768px)
+========================= */
+
+@media (max-width:768px){
+
+  :root{
+
+    --m-side:16px;
+    --m-bottom:24px;
+    --m-font:13px;
+    --m-maxw:680px;
+
+    --logo-h-mobile:120px;
+
+  }
+
+  /* Hover 제거 */
+
+  .folder:hover,
+  .file-card:hover{
+
+    transform:none !important;
+
+  }
+
+  /* Overlay */
+
+  .close-overlay{
+
+    top:24px;
+    left:24px;
+
+    font-size:28px;
+
+  }
+
+  .overlay-back{
+
+    bottom:160px;
+
+  }
+
+  /* Logo */
+
+  .logo-wrapper{
+
+    height:var(--logo-h-mobile);
+
+  }
+
+  .logo-wrapper img{
+
+    top:40px;
+    left:40px;
+
+    height:50px;
+
+  }
+
+  /* Layout */
+
+  .container{
+
+    display:flex;
+    flex-direction:column !important;
+
+    width:min(92vw,var(--m-maxw));
+
+    max-width:none;
+
+    margin:0 auto;
+
+    gap:24px;
+
+    padding:0 var(--m-side);
+
+    padding-top:
+      calc(var(--logo-h-mobile) + 20px);
+
+    padding-bottom:
+      calc(var(--footer-h) + 80px);
+
+  }
+
+  .left-pane,
+  .right-pane{
+
+    width:100%;
+
+  }
+
+  .left-pane{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+  }
+
+  .right-pane{
+
+    margin-top:20px;
+
+    font-size:var(--m-font);
+
+    line-height:1.8;
+
+  }
+
+  h5{
+
+    margin-bottom:18px;
+
+    font-size:13px;
+    line-height:1.7;
+
+  }
+
+  /* Floating */
+
+  .floating-button{
+
+    right:40px;
+    bottom:40px;
+
+  }
+
+  .back-button{
+
+    left:40px;
+    bottom:40px;
+
+  }
+
+  .coffee-float{
+
+    width:48px;
+
+  }
+
+  .back-button img{
+
+    width:48px;
+
+  }
+
+  footer{
+
+    padding:20px;
+
+    font-size:15px;
+
+  }
+
+  /* USB */
+
+  .usb-image{
+
+    display:block;
+
+    width:240px;
+
+    margin:0 auto;
+
+    top:0;
+    left:0;
+
+  }
+
+  .usb-port-wrap{
+
+    margin-top:40px;
+
+  }
+
+  .usb-port{
+
+    width:120px;
+
+  }
+
+  .usb-port.highlight{
+
+    transform:scale(1.05);
+
+  }
+
+  /* Folder */
+
+  .folder-grid{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:32px;
+
+  }
+
+  .folder-grid.active{
+
+    display:flex;
+
+  }
+
+  .folder-icon{
+
+    font-size:48px;
+
+  }
+
+  .folder-name{
+
+    font-size:13px;
+
+  }
+
+ /* File */
+
+.file-grid-view{
+
+    display:none;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:5px;
+
+    margin-top:30px;
+
+}
+
+.file-grid-view.active{
+
+    display:flex;
+
+}
+
+  #youtubeThumb{
+
+    width:260px;
+    height:auto;
+
+  }
+
+  .file-icon{
+
+    font-size:48px;
+
+  }
+
+  /* Memo */
+
+  .memo{
+
+    left:50% !important;
+
+    width:82vw;
+    max-width:300px;
+
+    transform:translateX(-50%);
+
+  }
+
+  .memo-editor,
+  .memo-text,
+  .memo-bullet{
+
+    font-size:13px;
+
+  }
+
+  /* Resize 제거 */
+
+  .resize-handle{
+
+    display:none;
+
+  }
+
+}

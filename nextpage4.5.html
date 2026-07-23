@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>akde</title>
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="images/favicon.png?v=2"
+  />
+
+  <!-- =========================
+       Font
+  ========================= -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css"
+  />
+
+  <!-- =========================
+       Styles
+  ========================= -->
+  <link rel="stylesheet" href="style-page4.5.css" />
+
+  <!-- =========================
+       Google Analytics
+  ========================= -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-JRLHG1RQ12"
+  ></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "G-JRLHG1RQ12");
+  </script>
+</head>
+
+<body>
+
+  <!-- =========================
+       Logo
+  ========================= -->
+
+  <div class="logo-wrapper">
+    <a href="index.html">
+      <img
+        class="logo-left"
+        src="images/logo_left.png"
+        alt="홈으로"
+      />
+    </a>
+  </div>
+
+  <!-- =========================
+       Next Button
+  ========================= -->
+
+  <div class="floating-button">
+    <img
+      class="coffee-float has-tooltip custom-cursor"
+      src="images/coffee-icon.png"
+      alt="한 잔 더"
+      onclick="location.href='nextpage4.html'"
+    />
+  </div>
+
+  <!-- =========================
+       Back Button
+  ========================= -->
+
+  <a
+    href="nextpage3.html"
+    class="back-button"
+  >
+    <img
+      src="images/dish3.png"
+      alt="이전 페이지로 이동"
+    />
+  </a>
+
+  <!-- =========================
+       Main
+  ========================= -->
+
+  <div class="container">
+
+    <!-- Left -->
+
+    <div class="left-pane">
+  
+
+      <img
+        id="usb"
+        class="usb-image"
+        src="images/USB.png"
+        alt="USB"
+      />
+
+    </div>
+
+    <!-- Right -->
+
+    <div class="right-pane">
+
+      <h5>
+        SM엔터테인먼트의 콘텐츠 프로모션 유닛은 유튜브, OTT 등 국내외 주요 플랫폼과의 협업을 통해
+        소속 아티스트의 대중적 인지도를 확대하는 조직입니다.
+        활동기·비활동기를 아우르는 타겟 마케팅 전략 수립부터 리스크 관리까지
+        아티스트의 브랜드 가치 보호와 성장을 지원합니다.
+        인턴 기간(6개월) 동안 콘텐츠 프로모션 실무 전반을 경험했습니다.
+
+        <br><br>
+
+        자사·타사 아티스트와 화제성 높은 콘텐츠를 모니터링하고 출연 콘텐츠를 아카이빙했습니다. 
+        이미지 보정과 결과 보고서 작성, 계약서·정산 관리 등 프로젝트 운영을 지원했습니다.
+
+        <br><br>
+
+        NCT, RIIZE, Hearts2Hearts 등의 라이브 방송 및
+        앨범·아티스트 프로모션 콘텐츠 제작 시
+        외주사 커뮤니케이션,
+        촬영 현장 모니터링,
+        가편 피드백 등을 수행하며
+        콘텐츠 제작의 전 과정에 참여했습니다.
+      </h5>
+
+      <div class="usb-port-wrap">
+
+        <img
+          id="usbPort"
+          class="usb-port"
+          src="images/usb port.png"
+          alt="USB Port"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+       Archive Overlay
+  ========================= -->
+
+  <div
+    id="archiveOverlay"
+    class="archive-overlay"
+  >
+
+    <button
+      id="closeOverlay"
+      class="close-overlay"
+    >
+      ✕
+    </button>
+
+    <button
+      id="backToFolders"
+      class="overlay-back"
+    >
+      ← back
+    </button>
+
+    <!-- =========================
+         Folder View
+    ========================= -->
+
+    <div
+      id="folderView"
+      class="folder-grid"
+    >
+
+      <div
+        id="folder1"
+        class="folder"
+      >
+        <div class="folder-icon">🗂️</div>
+        <div class="folder-name">팅글썰롱</div>
+      </div>
+
+      <div
+        id="folder2"
+        class="folder"
+      >
+        <div class="folder-icon">🗂️</div>
+        <div class="folder-name">미래 전략 회의</div>
+      </div>
+
+      <div
+        id="folder3"
+        class="folder"
+      >
+        <div class="folder-icon">🗂️</div>
+        <div class="folder-name">전과자</div>
+      </div>
+
+      <div
+        id="selectionNote"
+        class="folder note-folder"
+      >
+        <div class="folder-icon">☕️</div>
+        <div class="folder-name">선정 기준</div>
+      </div>
+
+    </div>
+
+    <!-- =========================
+         File View
+    ========================= -->
+
+    <div
+      id="fileView"
+      class="file-grid-view"
+    >
+
+      <a
+        id="youtubeFile"
+        class="file-card"
+        href="#"
+        target="_blank"
+      >
+
+        <img
+          id="youtubeThumb"
+          src=""
+          alt=""
+        />
+
+        <div class="file-name">
+          썸네일_최종본.png
+        </div>
+
+      </a>
+
+      <div
+        id="roleFile"
+        class="file-card"
+      >
+
+        <div class="file-icon">📝</div>
+
+        <div class="file-name">
+          담당 역할
+        </div>
+
+      </div>
+
+    </div>
+
+        <!-- =========================
+         Selection Memo
+    ========================= -->
+
+    <div
+      id="selectionMemo"
+      class="memo selection"
+      style="display:none;"
+    >
+
+      <div class="memo-header">
+
+        <span class="memo-title">
+          선정 기준
+        </span>
+
+        <div class="memo-buttons">
+
+          <button class="min-btn">
+            −
+          </button>
+
+          <button class="close-btn">
+            ×
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="memo-content">
+
+        <div class="resize-handle tl"></div>
+        <div class="resize-handle tr"></div>
+        <div class="resize-handle bl"></div>
+        <div class="resize-handle br"></div>
+
+        <div class="resize-handle left"></div>
+        <div class="resize-handle right"></div>
+
+        <div class="resize-handle top"></div>
+        <div class="resize-handle bottom"></div>
+
+        <div
+          id="selectionMemoBody"
+          class="memo-editor"
+        ></div>
+
+      </div>
+
+    </div>
+
+    <!-- =========================
+         Role Memo
+    ========================= -->
+
+    <div
+      id="roleMemo"
+      class="memo role"
+      style="display:none;"
+    >
+
+      <div class="memo-header">
+
+        <span class="memo-title">
+          NCT WISH / M2 / 팅글썰롱
+        </span>
+
+        <div class="memo-buttons">
+
+          <button class="min-btn">
+            −
+          </button>
+
+          <button class="close-btn">
+            ×
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="memo-content">
+
+        <div class="resize-handle tl"></div>
+        <div class="resize-handle tr"></div>
+        <div class="resize-handle bl"></div>
+        <div class="resize-handle br"></div>
+
+        <div class="resize-handle left"></div>
+        <div class="resize-handle right"></div>
+
+        <div class="resize-handle top"></div>
+        <div class="resize-handle bottom"></div>
+
+        <div
+          id="roleMemoBody"
+          class="memo-editor"
+        ></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+       Footer
+  ========================= -->
+
+  <footer>
+    <p>&copy; 2026 akde. All rights reserved.</p>
+  </footer>
+
+  <!-- =========================
+       Cursor
+  ========================= -->
+
+  <link rel="stylesheet" href="cursor.css">
+
+  <div class="trail-container"></div>
+
+  <script src="cursor.js" defer></script>
+
+  <!-- =========================
+       Page Script
+  ========================= -->
+
+  <script src="page4.5.js"></script>
+
+</body>
+</html>
