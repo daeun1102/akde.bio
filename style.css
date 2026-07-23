@@ -71,21 +71,32 @@ body {
 /* 오직 img1.png일 때만, 클래스 조건 만족 시 보여줌 */
 #mainImage.has-tooltip:hover + .tooltip { opacity: 1; }
 
-/* footer */
-footer {
+/* 푸터 */
+footer{
   position: fixed;
-  left: 0; right: 0; bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 50;
+
   height: var(--footer-h);
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   text-align: center;
   font-size: 15px;
-  opacity: .9;
+  line-height: 1;
   color: #fff;
+  opacity: .9;
 }
-footer p { padding: 0 12px; }
+
+footer p{
+  margin: 0;
+  padding: 0 12px;
+  line-height: 1;
+}
 
 /* selection */
 ::selection {

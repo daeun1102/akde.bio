@@ -190,8 +190,30 @@ footer p{ padding:0 12px; }
   .back-button img { width: 48px; height: auto; }
 
   /* 푸터: 15px 유지 */
-  footer{ 
-    position: fixed; left:0; right:0; bottom:0;
-    font-size: 15px !important; padding: 20px;
-  }
+ /* 푸터 */
+footer{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+
+  height: var(--footer-h);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  font-size: 15px;
+  line-height: 1;
+  color: #fff;
+  opacity: .9;
+}
+
+footer p{
+  margin: 0;
+  padding: 0 12px;
+  line-height: 1;
+}
 }

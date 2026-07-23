@@ -1080,6 +1080,7 @@ footer p{
 
   }
 
+  /* footer */
 footer{
   position: fixed;
   left: 0;
@@ -1094,9 +1095,8 @@ footer{
   text-align: center;
   font-size: 15px;
   opacity: .9;
-  color: #000000;
+  color: #fff;
 }
-
 footer p{
   padding: 0 12px;
 }
