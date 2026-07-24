@@ -186,16 +186,18 @@ body{
   }
 }
 
-  /* footer */
+body{
+  font-family: "SUIT Variable", "SUIT", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+}
+
+/* footer */
 footer{
   position:fixed;
   left:0;
   right:0;
   bottom:0;
 
-  height:var(--footer-h);
-
-   height:60px;
+  height:60px;
   min-height:60px;
   max-height:60px;
 
@@ -205,7 +207,11 @@ footer{
 
   text-align:center;
   font-size:15px;
+  font-family:inherit;
+  font-weight:400;
   line-height:1;
+  letter-spacing:0;
+
   color:#fff;
   opacity:.9;
 }
