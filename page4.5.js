@@ -625,18 +625,12 @@ document.querySelectorAll(".memo").forEach(memo => {
 
   function startMemoDrag(clientX, clientY) {
 
-    isDragging = true;
+  isDragging = true;
 
-    memo.style.position = "fixed";
-    memo.style.transform = "";
+  dragOffsetX = clientX - memo.offsetLeft;
+  dragOffsetY = clientY - memo.offsetTop;
 
-    dragOffsetX =
-      clientX - memo.offsetLeft;
-
-    dragOffsetY =
-      clientY - memo.offsetTop;
-
-  }
+}
 
   function moveMemo(clientX, clientY) {
 
