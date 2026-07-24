@@ -175,6 +175,15 @@ body{
 
 }
 
+@media (max-width: 768px){
+
+    body{
+        background-position: center center;
+        background-attachment: scroll; /* iPhone Safari에서 fixed 버그 방지 */
+    }
+
+}
+
   /* 반응형 */
 
   /* 📱 모바일 전용 스타일 */
@@ -184,10 +193,6 @@ body{
     left: 40px;   /* 좌측에서 20px 띄움 */
     height: 50px; /* 모바일에선 조금 축소 */
   }
-}
-
-body{
-  font-family: "SUIT Variable", "SUIT", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
 }
 
 /* footer */
@@ -220,6 +225,10 @@ footer p{
   margin:0;
   padding:0 12px;
   line-height:1;
+}
+
+footer{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
   @media (max-width: 1200px){ :root{ --thumbs-offset: -120px; } }
