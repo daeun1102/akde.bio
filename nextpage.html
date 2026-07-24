@@ -32,8 +32,18 @@
   }
 
   /* reset */
-  *{margin:0;padding:0;box-sizing:border-box}
-  html,body{min-height:100%}
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{
+  min-height:100%;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  min-height:100%;
+  -webkit-text-size-adjust:100%;
+}
+
   body{
   font-family:"SUIT",system-ui,-apple-system,sans-serif;
   color:#111;
@@ -49,14 +59,6 @@
   body{
     background-attachment: scroll;
   }
-}
-
-html{
-  -webkit-text-size-adjust:100%;
-}
-
-body{
-  -webkit-text-size-adjust:100%;
 }
 
   /* 레이아웃 (부모는 중앙 정렬, 칼럼은 좌/우 고정) */
@@ -138,15 +140,6 @@ body{
   .thumb:focus-within img {
     transform: translateY(-6px) scale(1.04);
   }
-
-  /* 하단 고정 푸터 */
-  footer{
-    position:fixed; left:0; right:0; bottom:0; z-index:50;
-    height: var(--footer-h);
-    display:flex; align-items:center; justify-content:center;
-    text-align:center; font-size:15px; opacity:.9; color:#fff;
-  }
-  footer p{ padding:0 12px; }
 
   /* =========================
    HOTSPOT
