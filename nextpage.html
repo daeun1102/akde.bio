@@ -35,11 +35,29 @@
   *{margin:0;padding:0;box-sizing:border-box}
   html,body{min-height:100%}
   body{
-    font-family:"SUIT",system-ui,-apple-system,sans-serif;
-    color:#111; line-height:1.6; overflow-x:hidden;
-    background-image:url('images/bg1.png');
-    background-size:cover; background-position:center; background-attachment:fixed;
+  font-family:"SUIT",system-ui,-apple-system,sans-serif;
+  color:#111;
+  line-height:1.6;
+  overflow-x:hidden;
+  background-image:url('images/bg1.png');
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+@media (max-width:640px){
+  body{
+    background-attachment: scroll;
   }
+}
+
+html{
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  -webkit-text-size-adjust:100%;
+}
 
   /* 레이아웃 (부모는 중앙 정렬, 칼럼은 좌/우 고정) */
   .container{
