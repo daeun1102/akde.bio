@@ -33,12 +33,6 @@ body{
   background-attachment:fixed;
 }
 
-@media (max-width:640px){
-  body{
-    background-attachment: scroll;
-  }
-}
-
   /* 레이아웃 (부모는 중앙 정렬, 칼럼은 좌/우 고정) */
   .container{
     width:min(var(--page-max),92vw);
@@ -80,7 +74,7 @@ body{
     width: var(--thumb-w);
     justify-self:end;
     margin-right: var(--thumbs-offset);
-    max-height: calc(100dvh - var(--logo-h) - 40px);
+    max-height: calc(100vh - var(--logo-h) - 40px);
     overflow-y:auto;
     overflow-x:visible;
     padding-left:6px;
@@ -200,6 +194,10 @@ footer{
   bottom:0;
 
   height:var(--footer-h);
+
+   height:60px;
+  min-height:60px;
+  max-height:60px;
 
   display:flex;
   align-items:center;
